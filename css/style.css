@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Montserrat&family=Ultra&display=swap");
+/* font-family: 'Bungee Inline', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Ultra', serif; */
+
+/****************************
+    REGLAS GLOBALES
+****************************/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  background-color: #000;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img {
+  width: 100%;
+}
+/****************************
+    CLASES GLOBALES
+****************************/
+.contenedor {
+  width: min(90%, 120rem);
+  margin: 0 auto;
+}
+/****************************
+    CLASE nav
+****************************/
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 6rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background-color: #000000;
+  display: flex;
+  overflow-x: auto;
+}
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  min-width: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: #fff;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.1s ease-in-out;
+}
+.nav__text {
+  font-size: 1.3rem;
+}
+.material-icons {
+  color: var(--colorPrincipal);
+}
+
+/****************************
+    CLASE wrapper
+****************************/
+.wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/****************************
+    CLASE contentProfile
+****************************/
+.contentProfile {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.myProfile__img {
+  width: 15rem;
+  height: 15rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.profile__title {
+  color: #000;
+  background-color: #fff;
+  width: fit-content;
+  padding: 0.5rem 2.5rem;
+  border-radius: 3rem;
+  margin: 01rem auto;
+}
+.profile__text {
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+}
+
+/****************************
+    CLASE pfTitle
+****************************/
+.contentPfTitle {
+  width: 100%;
+}
+.pfTitle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.pfTitle__second {
+  font-family: "Bungee Inline", cursive;
+  font-size: 3rem;
+  text-align: end;
+}
+.pfTitle__title {
+  font-family: "Bungee Inline", cursive;
+  font-size: 4rem;
+  text-align: start;
+  background-color: #fff;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .myProfile {
+    background-color: #fff;
+    color: #000;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+  }
+  .myProfile__img {
+    margin-top: -5rem;
+    background-color: #000;
+  }
+  .profile__text {
+    color: #000;
+  }
+  .profile__title {
+    background-color: #000;
+    color: #fff;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .contentProfile {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: #000;
+  }
+}
+
+button {
+  padding: 0.5rem 2.5rem;
+  border: unset;
+  border-radius: 1.5rem;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 1.5rem;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+  margin-top: 10px;
+  justify-content: end;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 1.5rem;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+button:hover {
+  color: #e8e8e8;
+}
+
+button:hover::before {
+  width: 100%;
+}
+
+/****************************
+    CLASE contentSkill
+****************************/
+.contentSkill {
+  background-color: #fff;
+  margin-top: 2rem;
+  height: 21rem;
+}
+.skill__title {
+  font-family: "Bungee Inline", cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #000;
+}
+.skill {
+  padding: 2rem 1rem;
+  margin: 0 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: #000;
+  border-radius: 3rem;
+}
+.cardSkill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cardSkill__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  color: #fff;
+}
+.cardSkill__img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.cardSkill__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin: 0 0.3rem;
+  color: #fff;
+}
+.contentLista {
+  margin-top: 2rem;
+  padding: 0 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.lista {
+  background-image: url(/img/memoji.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 40% 100%;
+}
+
+.lista ul {
+  color: #000;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.lista ul li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin: 1rem 3rem;
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 3rem;
+  list-style: none;
+}
+.listaImg__img {
+  width: 30rem;
+  height: 30rem;
+  background-color: #000;
+}
+footer{
+  background-color: #000;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: tomato;
+  height: 55rem;
+}
+footer img{
+  width: 20rem;
+  height: 20rem;
+}
+.footer_text{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  font-size: 2rem;
+
+}
